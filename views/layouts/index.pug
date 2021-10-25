@@ -1,0 +1,11 @@
+html 
+    head
+    title= title
+    
+    body
+    -   const estilo = "height: 40px; width:40px;color:blue; display:flex; align-items:center;object-position: center right;display: inline;margin-left: 10px;"
+         each product in products
+          ul
+            li(style = estilo)!= product.title
+            li(style = estilo)!= product.price
+            img(style = estilo src=product.thumbnail)
